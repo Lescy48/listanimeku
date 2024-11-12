@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ListAnimeKu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="menu-icon" onclick="toggleLogoutMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <h1>List Anime Ku</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="trending.html">Trending</a>
+      <a href="Incoming.html">Incoming</a>
+      <a>List</a>
+    </nav>
+    <div class="logout-menu" id="logoutMenu">
+      <a href="login.html" onclick="logout()">Logout</a>
+   </div>
+  </header>
+
+<main class="anime-list">
+
+    <div class="anime-card">
+      <img src="grandblue2.jpg" alt="Grand Blue 2">
+      <div class="anime-details">
+        <h2>Grand Blue Season 2</h2>
+        <p>Type: TV</p>
+        <p>Genres: Comedy</p>
+        <p>Episodes: Unknown</p>
+        <p>Rating: N/A</p>
+      </div>
+    </div>
+  </a>
+
+    <div class="anime-card">
+      <img src="ngnl2.jpg" alt="No Game No Life 2">
+      <div class="anime-details">
+        <h2>No Game No Life 2</h2>
+        <p>Type: TV</p>
+        <p>Genres: Comedy, Fantasy, Ecchi</p>
+        <p>Episodes: Unknown</p>
+        <p>Rating: N/A</p>
+      </div>
+    </div>
+  </a>
+
+    <div class="anime-card">
+      <img src="dandadan.jpg" alt="Dandadan">
+      <div class="anime-details">
+        <h2>Dandadan</h2>
+        <p>Type: TV</p>
+        <p>Genres: Action, Comedy, Supernatural</p>
+        <p>Episodes: 12</p>
+        <p>Rating: N/A</p>
+      </div>
+    </div>
+  </a>
+
+    <div class="anime-card">
+      <img src="opm3.jpg" alt="One Punch Man 3">
+      <div class="anime-details">
+        <h2>One Punch Man 3</h2>
+        <p>Type: TV</p>
+        <p>Genres: Action, Comedy</p>
+        <p>Episodes: Unknown</p>
+        <p>Rating: N/A</p>
+      </div>
+    </div>
+  </a>
+
+</main>
+<footer>
+  <p>&copy; 2024 ListAnimeKu. All rights reserved.</p>
+</footer>  
+
+<script src="script.js"></script>
+<script>
+  if (sessionStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>
