@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  padding: 40px 200px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.image-section img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.details-section {
+  max-width: 600px;
+}
+
+.details-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.details-section p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* Synopsis styling */
+.synopsis {
+  text-align: left;
+  margin-top: 20px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.synopsis h3 {
+  font-size: 1.5em;
+  color: #f8c471;
+  padding-bottom: 5px;
+}
+
+.synopsis p {
+  line-height: 1.5;
+  padding: 10px 0px;
+}
+
+.synopsis a {
+text-decoration: none;
+color: #4561ff
+}
+
+.synopsis a:hover {
+  text-decoration: underline;
+  color: #4561ff;
+  transition: color 0.3s;
+}
+
+.synopsis-img {
+  width: 100%;
+  max-width: 250px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+
+/*download link*/
+.download {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.download h3 {
+  font-size: 1.3em;
+  color: #4d67fc;
+  padding-bottom: 10px;
+}
+
+.download a {
+  text-decoration: none;
+  margin: 0px 7px;
+  color: #fff;
+}
+
+.download a:hover {
+  text-decoration: underline;
+  color: #4561ff;
+  transition: color 0.3s;
+}
+
+.download p {
+  padding: 3px 0px;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+}
+
+header h1 {
+  font-size: 4em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #bbb;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+
+  .details-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .logout-menu {
+    width: 90%; /* Make menu smaller for mobile */
+  }
+}
+
+/* Menu icon */
+.menu-icon {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-icon .line {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* Darken the icon lines on hover */
+.menu-icon:hover .line {
+  background-color: #bbb; /* Darker color on hover */
+}
+
+/* Logout menu */
+.logout-menu {
+  position: fixed;
+  top: 0;
+  left: -50%; /* Start from the left, off-screen */
+  width: 50%; /* Adjust width on larger screens */
+  height: 100vh;
+  background-color: #444;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  transition: transform 0.3s ease;
+}
+
+.logout-menu.show {
+  transform: translateX(100%); /* Slide the menu in */
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 40px; /* Add space below the X button */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avatar-line {
+  width: 80%; /* Adjust width */
+  height: 2px; /* Thickness of line */
+  background-color: #bbb; /* Line color */
+  margin: 10px auto; /* Space and center */
+}
+
+.username {
+  font-size: 1.2em;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px; /* Slight spacing below avatar */
+}
+
+.logout-btn {
+  margin-top: 10px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Exit Button (X) */
+.exit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.overlay-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darken the background */
+  z-index: 1000; /* Below the logout menu */
+  display: none; /* Hidden by default */
+}
+
+@media (min-width: 1024px) { 
+  .logout-menu {
+    width: 250px; /* Set a fixed width */
+    position: fixed; /* Ensure it's fixed on the screen */
+    top: 0;
+    right: auto; /* Align it to the right */
+    left: 0; /* Override any previous left positioning */
+    height: 100vh; /* Full screen height */
+    transform: translateX(-100%); /* Start hidden */
+  }
+
+  .logout-menu.show {
+    transform: translateX(0); /* Slide in properly */
+  }
+}
+
+.exit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.exit-btn:hover {
+  color: #bbb;
+}
+
+.logout-text {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center; /* Center the text */
+  cursor: pointer;
+  margin-top: 50px; /* Position logout text below the X button */
+  display: flex;
+  justify-content: flex-end; /* Align text to the right */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Ensure it takes full width */
+  margin-right: 20px; /* Add space on the right */
+}
+
+@media (max-width: 768px) {
+  .logout-text {
+    padding-right: 10px; /* Smaller space on mobile */
+  }
+}
+
+.logout-text:hover {
+  color: #bbb;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+body {
+  background-image: url('img/Megumin.png');
+  background-position: right 10px bottom 60px;
+  background-repeat: no-repeat;
+  background-size: 200px auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  footer p {
+  margin: 0;
+  font-size: 0.9em;
+  }
+
+  .button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Yes button */
+.yes {
+    background-color: red !important;  /* Force red */
+    color: white !important;
+}
+
+/* No button */
+.no {
+    background-color: gray !important; /* Force gray */
+    color: white !important;
+}
